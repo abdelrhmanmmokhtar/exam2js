@@ -1,0 +1,86 @@
+body{
+    background-color: #0D0D0D;
+    color: #f9f6f6 !important;
+    overflow: hidden;
+}
+.clolol{
+    color: white ;
+}
+
+.colnav{
+    background-color: hsla(0, 0%, 0%, 0.103);
+    height: 100vh;
+}
+
+i{
+    cursor: pointer;
+}
+/* هنا عملت الطيقة فوق الوجبات  */
+.the-meal{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    top: 100%;
+    transition: 0.8S;
+    -webkit-transition: 0.8S;
+    -moz-transition: 0.8S;
+    -ms-transition: 0.8S;
+    -o-transition: 0.8S;
+}
+ 
+
+.meal:hover .the-meal{
+    top: 0;
+}
+
+.navesM{
+    z-index: 100;
+    
+    height: 100vh;
+}
+
+
+.alert{
+    width: fit-content;
+}
+
+
+
+.sworts{
+    z-index: 686;
+    display: flex;
+}
+
+
+
+.swortsoflayer{
+    position: absolute;
+    z-index: 9;
+    background-color: black;
+    display: flex;
+}
+
+.slon{
+    transition: all 0.5s ;
+    -webkit-transition: all 0.5s ;
+    -moz-transition: all 0.5s ;
+    -ms-transition: all 0.5s ;
+    -o-transition: all 0.5s ;
+}
+.slon:hover{
+    color: red;
+}
+
+
+
+
+.wimgs{
+    width: 35px;
+}
+
+.pointer-click{
+    cursor: pointer;
+}
+.sojkkk{
+    height: 100vh;
+}
