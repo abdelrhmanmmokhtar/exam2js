@@ -1,5 +1,5 @@
-let thbin = document.getElementById("thbin");
-let butSerch = document.getElementById("butserch");
+let thbin = document.querySelector("#thbin");
+let butSerch = document.querySelector("#butserch");
 let subbtn;
 $(document).ready(() => {
     serchofname("").then(() => {
@@ -290,29 +290,29 @@ function discont() {
         <button id="subbtn" disabled class="btn btn-outline-danger px-2 mt-3">Submit</button>
     </div>
 </div> `
-    subbtn = document.getElementById("subbtn")
+    subbtn = document.querySelector("#subbtn")
 
-    document.getElementById("namees11").addEventListener("focus", () => {
+    document.querySelector("#namees11").addEventListener("focus", () => {
         namees11nop = true
     })
 
-    document.getElementById("emailaco").addEventListener("focus", () => {
+    document.querySelector("#emailaco").addEventListener("focus", () => {
         emailaconop = true
     })
 
-    document.getElementById("phonenum").addEventListener("focus", () => {
+    document.querySelector("#phonenum").addEventListener("focus", () => {
         phonenumnop = true
     })
 
-    document.getElementById("agees").addEventListener("focus", () => {
+    document.querySelector("#agees").addEventListener("focus", () => {
         ageesnop = true
     })
 
-    document.getElementById("passworddd").addEventListener("focus", () => {
+    document.querySelector("#passworddd").addEventListener("focus", () => {
         passwordddnop = true
     })
 
-    document.getElementById("rrepasswordd").addEventListener("focus", () => {
+    document.querySelector("#rrepasswordd").addEventListener("focus", () => {
         rrepassworddnop = true
     })
 }
@@ -325,54 +325,54 @@ let repassworddnop = false;
 function invalid() {
     if (namees11nop) {
         if (namevalid()) {
-            document.getElementById("nameAlert").classList.replace("d-block", "d-none")
+            document.querySelector("#nameAlert").classList.replace("d-block", "d-none")
 
         } else {
-            document.getElementById("nameAlert").classList.replace("d-none", "d-block")
+            document.querySelector("#nameAlert").classList.replace("d-none", "d-block")
 
         }
     }
     if (emailaconop) {
 
         if (emailvalid()) {
-            document.getElementById("emailAlert").classList.replace("d-block", "d-none")
+            document.querySelector("emailAlert").classList.replace("d-block", "d-none")
         } else {
-            document.getElementById("emailAlert").classList.replace("d-none", "d-block")
+            document.querySelector("emailAlert").classList.replace("d-none", "d-block")
 
         }
     }
 
     if (phonenumnop) {
         if (phonevalid()) {
-            document.getElementById("phoneAlert").classList.replace("d-block", "d-none")
+            document.querySelector("#phoneAlert").classList.replace("d-block", "d-none")
         } else {
-            document.getElementById("phoneAlert").classList.replace("d-none", "d-block")
+            document.querySelector("#phoneAlert").classList.replace("d-none", "d-block")
 
         }
     }
 
     if (ageesnop) {
         if (agevalid()) {
-            document.getElementById("ageAlert").classList.replace("d-block", "d-none")
+            document.querySelector("#ageAlert").classList.replace("d-block", "d-none")
         } else {
-            document.getElementById("ageAlert").classList.replace("d-none", "d-block")
+            document.querySelector("#ageAlert").classList.replace("d-none", "d-block")
 
         }
     }
 
     if (passwordddnop) {
         if (passwordvalid()) {
-            document.getElementById("passwordAlert").classList.replace("d-block", "d-none")
+            document.querySelector("#passwordAlert").classList.replace("d-block", "d-none")
         } else {
-            document.getElementById("passwordAlert").classList.replace("d-none", "d-block")
+            document.querySelector("#passwordAlert").classList.replace("d-none", "d-block")
 
         }
     }
     if (repassworddnop) {
         if (repasswordvalid()) {
-            document.getElementById("repasswordAlert").classList.replace("d-block", "d-none")
+            document.querySelector("#repasswordAlert").classList.replace("d-block", "d-none")
         } else {
-            document.getElementById("repasswordAlert").classList.replace("d-none", "d-block")
+            document.querySelector("#repasswordAlert").classList.replace("d-none", "d-block")
 
         }
     }
@@ -389,20 +389,20 @@ function invalid() {
 }
 // هنا انا خد الفلديشن زي الموقع بالظبط
 function namevalid() {
-    return (/^[a-zA-Z ]+$/.test(document.getElementById("namees11").value))
+    return (/^[a-zA-Z ]+$/.test(document.querySelector("#namees11").value))
 }
 function emailvalid() {
-    return (/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(document.getElementById("emailaco").value))
+    return (/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(document.querySelector("#emailaco").value))
 }
 function phonevalid() {
-    return (/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/.test(document.getElementById("phonenum").value))
+    return (/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/.test(document.querySelector("#phonenum").value))
 }
 function agevalid() {
-    return (/^(0?[1-9]|[1-9][0-9]|[1][1-9][1-9]|200)$/.test(document.getElementById("agees").value))
+    return (/^(0?[1-9]|[1-9][0-9]|[1][1-9][1-9]|200)$/.test(document.querySelector("#agees").value))
 }
 function passwordvalid() {
-    return (/^(?=.*\d)(?=.*[a-z])[0-9a-zA-Z]{8,}$/.test(document.getElementById("passworddd").value))
+    return (/^(?=.*\d)(?=.*[a-z])[0-9a-zA-Z]{8,}$/.test(document.querySelector("#passworddd").value))
 }
 function repasswordvalid() {
-    return document.getElementById("rrepasswordd").value == document.getElementById("passworddd").value
+    return document.querySelector("#rrepasswordd").value == document.querySelector("#passworddd").value
 }
